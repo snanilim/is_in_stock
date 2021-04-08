@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="col-lg-4" style="background-color: #fff; text-align: center; padding: 50px 0;">
+        <div class="card">
+            <div class="card-header">
+                {% if data['body'] == "Out Of Stock" %}
+                    <h1 class="text-danger">{{ data['body'] }}</h1>
+                {% else %}
+                    <h1 class="text-success">{{ data['body'] }}</h1>
+                {% endif %}
+              </div>
+            <div class="card-body">
+                {{ data['title'] }}
+            </div>
+            <img src="{{ data['image_url'] }}" alt="My image">
+        </div>
+        
+    </div>
+{% endblock %}

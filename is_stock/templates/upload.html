@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="col-sm-5" style="text-align: center; padding: 50px 0;">
+        <div class="card">
+            <div class="card-body" style="overflow: hidden;">
+                <title>Update new link</title>
+                <h3>Upload Link</h3>
+                <form action="/uploadfiles/" enctype="multipart/form-data" method="post">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="upload_link" placeholder="upload link">
+                    </div>
+                    <button type="submit" class="btn btn-info btn-block" value=Upload>Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
